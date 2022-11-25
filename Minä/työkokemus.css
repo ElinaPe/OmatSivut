@@ -85,8 +85,9 @@ img {
 }
 
 .työotsikko h2, .koulutusotsikko h2 {
-    font-size: 50px;
+    font-size: 55px;
     font-family: 'Cinzel', serif;
+    color: #EB6440;
 }
 
 .työlista, .koulutuslista {
@@ -113,7 +114,7 @@ img {
 }
 
 
-
+/*ALANAVI*/
 
   .sivu {
     width: 100%;
@@ -148,4 +149,52 @@ img {
     font-size: 16px;
     color: black;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 890px) {
+    .työotsikko h2, .koulutusotsikko h2 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .työkokemus, .koulutus {
+        flex-direction: column;
+    }
+    .työkokemus h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .koulutusotsikko h2 {
+        margin-bottom: 10px
+    }
+    .työlista, .koulutuslista {
+        align-self: center;
+        width: 90%;
+    }
+    #taustakuva {
+        display: none;
+    }
+    
+    .H-ylaosa {
+        background-image: url("mandala.jpg");
+        background-size: cover;
+    }
+
+    .sivu {
+        background: linear-gradient(to left, #D6E4E5, #497174, #497174);
+    }
+
+    /*ALKU*/
+   
+    /*LOPPU*/
+    
+}
+@media only screen and (max-width: 500px) {
+    .työlista, .koulutuslista {
+        width: 100%;
+    }
+    .Otsikko h1 {
+        align-self: center;
+    }
 }

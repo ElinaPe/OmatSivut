@@ -132,7 +132,7 @@
     }
     .SideNav {
         top: -15%;
-        margin: 0;
+        margin: 10px;
         gap: 20px;
     }
     .esittely {

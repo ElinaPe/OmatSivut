@@ -74,20 +74,15 @@
     align-items: center;
 }
 
-.H-main h3, .H-main p {
+.H-main h3, .H-main p, .H-main h4 {
     width: 80%;
     margin: 20px;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-li {
-    font-weight: bold;
-    font-size: large;
+
+.kuva {
+    display: none;
 }
 
 /*KAIKKIEN ALAOSA*/
@@ -253,3 +248,43 @@ li {
     overflow: hidden;
   }
 
+
+
+  @media only screen and (max-width: 880px) {
+    .panel.active {
+        align-items: flex-start;
+    }
+    
+  }
+
+  @media only screen and (max-width: 768px) {
+    .H-ylaosa h1, .H-ylaosa a, .H-ylaosa p {
+        right: 0;
+    }
+    .SideNav {
+        left: 0;
+    }
+    .gif {
+        display: none;
+    }
+    .kuva {
+        display: flex;
+    }
+    .kuva img {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 668px) {
+    .liikkukuvat {
+        flex-direction: column;
+    }
+    .panel.active {
+        align-items: center;
+    }
+    .H-main h3 {
+        margin-bottom: 0;
+    }
+  }
