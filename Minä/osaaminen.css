@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+/*HARRASTUKSET*/
+
+/*KAIKKIEN YLÄOSA*/
+.H-ylaosa {
+    background: linear-gradient(to right, #D6E4E5, #D6E4E5, #497174);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.Otsikko {
+    font-family: 'Parisienne', cursive;
+    font-size: 50px;
+    animation-name: liiku;
+    animation-duration: 2s;
+}
+
+@keyframes liiku {
+    0%   { 
+        top: -10px;
+    }
+    100% { 
+        top: 0px;
+    }
+}
+
+.H-ylaosa p, .H-ylaosa a {
+    color: black;
+    position: relative;
+    align-self: center;
+    right: 20%;
+}
+
+.linkit {
+    text-decoration: none;
+}
+
+.H-ylaosa a:hover {
+    color: #EB6440; 
+    text-decoration: none;
+}
+
+.Otsikko:hover {
+    color: black;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out 0.2s;
+}
+
+.container {
+    display: flex;
+  }
+
+.gif {
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+.H-main {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.H-main h3, .H-main p {
+    width: 80%;
+    margin: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+li {
+    font-weight: bold;
+    font-size: large;
+}
+
+/*KAIKKIEN ALAOSA*/
+.sivu {
+    width: 100%;
+    height: 28vh;
+    background: linear-gradient(to left, #D6E4E5, #497174, #497174);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.SideNav {    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    left: -19%;
+}
+
+.SideNav a {
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.sivu a:hover {
+    color: #EB6440;
+    text-decoration: none;
+}
+.takaisin {
+    width: min-content;
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+/*OSAAMINEN*/
+
+.saate {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.liikkukuvat {
+    display: flex;
+    width: 80wv;
+}
+
+.panel {
+    background-color: #EB6440;
+    height: 35vh;
+    border-radius: 50px;
+    cursor:pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    background-color: #EFF5F5;
+    transition: background-color 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    display: flex;
+}
+
+.panel.active a {
+    color: black;
+    text-decoration: none;
+}
+.panel.active a:hover {
+    color:#EB6440;
+}
+
+
+/*Gifin hallinta*/
+
+.object-and-details {
+    display: inline-block;
+    position: relative;
+  }
+  
+  summary {
+    color: #fff;
+    background: #000;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url("https://assets.codepen.io/128034/play_circle_filled-24px.svg");
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  
+  [open] summary {
+    background-image: url("https://assets.codepen.io/128034/pause_circle_filled-24px.svg");
+    box-shadow: 0 0 0 2px #fff;
+    background-color: white;
+  }
+  
+  /* for blink/webkit */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  /* for firefox */
+  details > summary:first-of-type {
+    list-style: none;
+  }
+  
+  summary + * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    padding-top: 3rem;
+    background: #fff;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  summary + * a {
+    color: #fff;
+  }
+  summary:focus {
+    box-shadow: 0 0 0 0.25rem #aade87;
+    outline: transparent;
+  }
+  
+  .object-and-details1 img {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+
