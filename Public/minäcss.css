@@ -86,7 +86,8 @@
     margin: 10px 70px;
     padding: 30px;
     text-align: center;
-    gap: 20px
+    gap: 30px;
+    left: 20px;
 }
 #profiilikuva2 {
     display: none;
